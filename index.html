@@ -1,0 +1,132 @@
+<html>
+
+<head>
+  <meta charset="UTF-8">
+  <title>Your Portfolio</title>
+  <link rel="stylesheet" href="style.css" id="light-theme">
+  <link rel="stylesheet" href="dark-mode.css" id="dark-theme">
+</head>
+
+<body>
+  <nav>
+    <ul>
+      <li><a href="#home">Home</a></li>
+      <li><a href="#education">Education</a></li>
+      <li><a href="#experience">Experience </a></li>
+      <li><a href="#contact">Contact</a></li>
+      <li><a href="#" id="toggle-mode">Toggle Mode</a></li>
+    </ul>
+  </nav>
+
+  <div id="content">
+    <section id="home">
+      <h1>Welcome to My Portfolio</h1>
+      <img src="pic.jpeg" alt="Your Image" id="profile-image" onclick="showDetails()">
+
+      <div id="details-modal" class="modal">
+        <div class="modal-content">
+          <span class="close" onclick="closeModal()">&times;</span>
+          <h2>Nanditha Bandi</h2>
+          <ul>
+            <li>
+              I'm currently pursuing an MS in Computer Science at Saint Louis University,
+              set to graduate in 2025. I hold a BTech in Electronics and Communication
+              Engineering from KL Deemed University.
+            </li>
+            <li>
+              In my leisure, I indulge in movies and dramas, finding joy in cinematic
+              experiences. Additionally, I relish weekend trips with friends, creating
+              memorable moments and fostering strong connections.
+            </li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <section id="education">
+      <center>
+        <h2>Education History</h2>
+      </center>
+
+      <div class="education-entry">
+        <h3>Masters of Science In Computer Science</h3>
+        <p><strong>Period:</strong> 2023-2025</p>
+        <p><strong>University:</strong> Saint Louis University</p>
+        <p><strong>Location:</strong> St. Louis, Missouri</p>
+      </div>
+
+      <div class="education-entry">
+        <h3>Bachelor of Technology, Electronics and Communication Engineering</h3>
+        <p><strong>Period:</strong> 2019-2023</p>
+        <p><strong>University:</strong> KL Deemed to be University</p>
+        <p><strong>Location:</strong> Vaddeswaram, Andhra Pradesh</p>
+      </div>
+
+      <div class="education-entry">
+        <h3>Board Of Intermediate Education AP- MPC</h3>
+        <p><strong>Period:</strong> 2017-2019</p>
+        <p><strong>College:</strong> SRI CHAITANYA JUNIOR COLLEGE</p>
+      </div>
+
+      <div class="education-entry">
+        <h3>Andhra Pradesh Board of Secondary Education</h3>
+        <p><strong>Period:</strong> 2016-2017</p>
+        <p><strong>School:</strong> Rushi Vidya Sadan</p>
+      </div>
+    </section>
+
+    <section id="experience">
+      <center>
+        <h2>Work/Volunteer Experience</h2>
+      </center>
+
+      <div class="experience-entry">
+      <h3><p>Explore my experiences further by clicking the provided link</p></h3>
+      <h3><a href="experience.html">Experience</a></h3>
+      </div>
+
+      <div class="experience-entry">
+      <h3><p>Internship at Maven Silicon Softech Ltd</p></h3>
+      <h4>Specializing in AHB2APB Bridge RTL design using Verilog HDL.</h4>
+      </div>
+
+      <div class="experience-entry">
+      <h3><p>Organizer at FEMFLARE-2020</p></h3>
+      <h4>Actively contributed to the organization of the Intercollegiate Female Festival (FEMFLARE)-2020 as an
+        organizer on 7th March 2020. This event, orchestrated by the Women's Forum at KLEF in Vijayawada, Andhra
+        Pradesh, showcased my commitment to successful event management.</h4>
+      </div>
+    </section>
+     
+    <section id="contact">
+      <div class="contact-entry">
+        <center>
+          <h2>Contact Me</h2>
+        </center>
+        <h3>Reach out to me via the following link.</h3>
+        <h3><a href="contact.html">Contact</a></h3>
+      </div>
+    </section>
+
+  <script src="script.js" defer></script>
+  <script>
+    function showDetails() {
+      const modal = document.getElementById('details-modal');
+      modal.style.display = 'block';
+    }
+
+    function closeModal() {
+      const modal = document.getElementById('details-modal');
+      modal.style.display = 'none';
+    }
+
+    window.onclick = function (event) {
+      const modal = document.getElementById('details-modal');
+      if (event.target === modal) {
+        modal.style.display = 'none';
+      }
+    };
+  </script>
+</body>
+
+</html>
